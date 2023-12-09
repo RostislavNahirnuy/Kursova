@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribution Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: right;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav {
+            display: inline-block;
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form-container input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .next-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+            background-color: #888;
+        }
+
+        .provide-accounts-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Distribution Site</h1>
+        <nav>
+            <button onclick="goToSubscriptionPlans()">Subscription</button>
+            <button class="provide-accounts-button" onclick="goToProvidingAccounts()">Providing Accounts</button>
+        </nav>
+    </header>
+
+    <main>
+        <p>Upload the material you want to distribute.</p>
+        
+        <div class="form-container">
+            <label for="material-upload">Loading material:</label>
+            <input type="file" id="material-upload" name="material-upload">
+            
+            <button class="next-button" onclick="goToProcessing()">Next</button>
+        </div>
+    </main>
+
+    <script>
+        function goToSubscriptionPlans() {
+            window.location.href = "SubscriptionPlans.html";
+        }
+
+        function goToProvidingAccounts() {
+            window.location.href = "ProvidingAccounts.html";
+        }
+
+        function goToProcessing() {
+            window.location.href = "Processing.html";
+        }
+    </script>
+</body>
+</html>

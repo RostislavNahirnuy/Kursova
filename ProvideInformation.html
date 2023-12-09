@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribution Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: right;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav {
+            display: inline-block;
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .provide-accounts-button {
+            background-color: #ff6347; 
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section input[type="file"],
+        .section input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .section .names-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section .names-container input {
+            width: calc(48% - 12px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .section .names-container .buttons-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        .section .names-container .buttons-container button {
+            width: 24px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .section .roles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section .roles-container input {
+            width: calc(48% - 12px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .section .roles-container .buttons-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        .section .roles-container .buttons-container button {
+            width: 24px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .section .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section .services-container label {
+            width: 30%;
+            margin-bottom: 10px;
+        }
+
+        .section .services-container input {
+            margin-right: 5px;
+        }
+
+        .next-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Distribution Site</h1>
+        <nav>
+            <button class="tech-support-button" onclick="goToTechSupport()">Technical support</button>
+            <button class="subscription-button" onclick="goToSubscriptionPlans()">Subscriptions</button>
+            <button class="provide-accounts-button" onclick="goToProvidingAccounts()">Providing accounts</button>
+        </nav>
+    </header>
+
+    <main>
+        <p>Upload the cover art and provide information about right holders and publication services.</p>
+        
+        <div class="form-container">
+
+            
+            <div class="section">
+                <label for="project-name">Project name:</label>
+                <input type="text" id="project-name" name="project-name">
+            </div>
+
+            
+            <div class="section">
+                <label for="cover-art">Download the cover art:</label>
+                <input type="file" id="cover-art" name="cover-art">
+            </div>
+
+           
+            <div class="section">
+                <label>Right holders:</label>
+                <div class="names-container">
+                    <input type="text" placeholder="Enter name">
+                    <input type="text" placeholder="Enter role">
+                </div>
+                <div class="buttons-container">
+                    <button class="add-button" onclick="addName()">Add</button>
+                    <button class="remove-button" onclick="removeName()">Pick up</button>
+                </div>
+            </div>
+
+           
+            <div class="section">
+                <label>Services for publishing:</label>
+                <div class="services-container">
+                    <label><input type="checkbox" name="Spotify" checked>Spotify</label>
+                    <label><input type="checkbox" name="Apple Music" checked>Apple Music</label>
+                    <label><input type="checkbox" name="YouTube Music" checked>YouTube Music</label>
+                </div>
+            </div>
+
+            <button class="next-button" onclick="goToDownloadthematerial()">Next</button>
+        </div>
+    </main>
+
+    <script>
+        function goToTechSupport() {
+            window.location.href = "TechSupport.html";
+        }
+
+        function goToSubscriptionPlans() {
+            window.location.href = "SubscriptionPlans.html";
+        }
+
+        function goToProvidingAccounts() {
+            window.location.href = "ProvidingAccounts.html";
+        }
+
+        function goToDownloadthematerial() {
+            window.location.href = "Downloadthematerial.html";
+        }
+
+        function addName() {
+            const namesContainer = document.querySelector('.names-container');
+            const nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.placeholder = 'Enter name';
+            namesContainer.appendChild(nameInput);
+            const roleInput = document.createElement('input');
+            roleInput.type = 'text';
+            roleInput.placeholder = 'Enter role';
+            namesContainer.appendChild(roleInput);
+        }
+
+        function removeName() {
+            const namesContainer = document.querySelector('.names-container');
+            const inputs = namesContainer.querySelectorAll('input[type="text"]');
+            if (inputs.length > 2) {
+                namesContainer.removeChild(inputs[inputs.length - 2]);
+                namesContainer.removeChild(inputs[inputs.length - 1]);
+            }
+        }
+    </script>
+</body>
+</html>

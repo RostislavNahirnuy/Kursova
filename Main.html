@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: right;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav {
+            display: inline-block;
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav button {
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        header nav .support-button {
+            background-color: #555; 
+        }
+
+        header nav .subscriptions-button {
+            background-color: #808080; 
+        }
+
+        header nav .provide-accounts-button {
+            background-color: #e74c3c; 
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main button {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .banner {
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin: 0 10px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .more-info-button {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Main Site</h1>
+        <nav>
+            <button class="support-button" onclick="goToTechSupport()">Technical Support</button>
+            <button class="subscriptions-button" onclick="goToSubscriptionPlans()">Subscriptions</button>
+            <button class="provide-accounts-button" onclick="goToProvidingAccounts()">Providing Accounts</button>
+        </nav>
+    </header>
+
+    <main>
+        <p>Welcome to our distribution site! Here, you can find a variety of products and services for distribution.</p>
+        <p>Explore our wide range of options and choose the best fit for your needs.</p>
+
+        <button onclick="goToSelectAType()">Select a type</button>
+
+        <div class="banner-container">
+            <div class="banner">
+                <img src="123456.jpg" alt="Banner 1">
+                <div class="banner-info">
+                    <p>Product 1</p>
+                    <p>Short description of Product 1.</p>
+                    <button class="more-info-button">More information</button>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="12345.jpg" alt="Banner 2">
+                <div class="banner-info">
+                    <p>Product 2</p>
+                    <p>Short description of Product 2.</p>
+                    <button class="more-info-button">More information</button>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="12345678.jpg" alt="Banner 3">
+                <div class="banner-info">
+                    <p>Product 3</p>
+                    <p>Short description of Product 3.</p>
+                    <button class="more-info-button">More information</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function goToTechSupport() {
+            window.location.href = "TechSupport.html";
+        }
+
+        function goToSubscriptionPlans() {
+            window.location.href = "SubscriptionPlans.html";
+        }
+
+        function goToProvidingAccounts() {
+            window.location.href = "ProvidingAccounts.html";
+        }
+
+        function goToSelectAType() {
+            window.location.href = "SelectAType.html";
+        }
+    </script>
+</body>
+</html>
